@@ -43,16 +43,12 @@
 (define WireType (signature (enum "input" "output"))) 
 (define-struct wire [value type]) ; value is variable 
 (define InOrOut (signature [WireOf String WireType]))
-(define (wire-temp w)
-  (... (wire-value w) ... (wire-type w) ...))
 
 ;Gate
 (define Operator (signature (enum "and" "or" "not")))
 (define Orientation (signature (enum "up" "down" "left" "right")))
 (define-struct gate [operator orientation])
 (define AGate (signature [GateOf Operator Orientation]))
-(define (gate-temp g)
-  (... (gate-operator g) ... (gate-orientation g) ...))
 
 ; Examples:
 (define c1 (make-cell (make-wire "X" "input") "none"))
@@ -62,24 +58,10 @@
 (define c5 (make-cell (make-gate "not" "down") "none"))
 (define ce (make-cell "empty" "none"))
 
-; Template:
-(define (cell-temp c)
-  (cond [(string=? (cell-content c) "plate") ...]
-        [(string=? (cell-content c) "empty") ...]
-        [(wire? (cell-content c)) (wire-temp c)]
-        [(gate? (cell-content c)) (gate-temp c)]
-        [(string=? (cell-assigned c) "none") ...]
-        [(string=? (cell-assigned c) "pos") ...]
-        [(string=? (cell-assigned c) "neg") ...]))
 
 ; a Grid is a [ListOf [ListOf ACell]]
 ; which contains a list inside a list of cells representing the each row 
 (define AGrid (signature [ListOf [ListOf ACell]]))
-(define (grid-temp g)
-  (... (cond [(empty? g)...]
-             [(empty? (first g))...(rest g)...]
-             [(cons? g)]
-             [(cons? (first g))...(cell-temp (first (first g)))...(grid-temp (rest (first g)))])))
 
 (define G1 (list (list c1 c2) (list c3 ce)))
 (define G2 (list (list c5 ce c1) (list ce ce ce) (list c4 c2 c5)))
