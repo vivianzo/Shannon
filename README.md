@@ -1,7 +1,7 @@
 # Shannon
 Project created for Northeastern's Accelerated Fundamentals of Computer Science I class during the fall 2023 semester. 
 
-# Logistic Information
+# Logistical Information
 This game is based on [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon), who is known as the "father of Information Technology". The game was made in racket using the [Universe Library](https://docs.racket-lang.org/teachpack/2htdpuniverse.html#(part._universe)) provided. The main objective of the game is to create a logic board with inputs and outputs as well as goals to win the game. 
 
 There are 3 main pieces in the game, represented as cells: 
@@ -19,6 +19,6 @@ These are two examples of winnable boards
 </p>
 
 # Extra Info
-Since this project is made for a class, the source code can only be acessed upon request. 
+Since this project is made for a class, the source code can only be accessed upon request. 
 
 
