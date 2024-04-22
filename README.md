@@ -1,5 +1,5 @@
 # Shannon
-Project created for Northeastern's Accelerated Fundamentals of Computer Science I class during the fall 2023 semester. 
+This project was developed as part of Northeastern's Accelerated Fundamentals of Computer Science I class during the fall semester of 2023.
 
 # Logistical Information
 The game was made in racket using the [Universe Library](https://docs.racket-lang.org/teachpack/2htdpuniverse.html#(part._universe)) provided. 
@@ -24,6 +24,6 @@ Upon parsing the game, the cells will propagate the charges through the board ba
 </p>
 
 # Extra Info
-Since this project was made for a class, the source code can only be accessed upon request. To learn more about this assignment, refer to the [original directions](https://github.com/vivianzo/Shannon/blob/main/Shannon%20Instructons.pdf).
+To learn more about this assignment, refer to the [original directions](https://github.com/vivianzo/Shannon/blob/main/Shannon%20Instructons.pdf). 
 
 
